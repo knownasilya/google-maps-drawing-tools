@@ -6,13 +6,6 @@ export interface PolygonToolOptions extends ToolOptions {
 
 export type DrawingMode = 'Point' | 'LineString' | 'Polygon' | null;
 
-export interface CircleStyles {
-  strokeColor: string;
-  fillColor: string;
-  fillOpacity: number;
-  strokeWeight: number;
-}
-
 export default class PolygonTool extends Tool {
   id: string;
   data: google.maps.Data;
