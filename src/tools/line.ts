@@ -1,13 +1,13 @@
 import Tool, { ToolOptions } from '../tool';
 
-export interface PolygonToolOptions extends ToolOptions {
+export interface LineToolOptions extends ToolOptions {
   data: google.maps.Data;
   style?: google.maps.Data.StyleOptions;
 }
 
 export type DrawingMode = 'Point' | 'LineString' | 'Polygon' | null;
 
-export default class PolygonTool extends Tool {
+export default class LineTool extends Tool {
   id: string;
   data: google.maps.Data;
 
@@ -15,17 +15,15 @@ export default class PolygonTool extends Tool {
   private dataStyle: google.maps.Data.StyleOptions;
   private dataListener?: google.maps.MapsEventListener;
 
-  constructor(options: PolygonToolOptions) {
+  constructor(options: LineToolOptions) {
     super(options);
 
-    this.id = 'polygon';
+    this.id = 'line';
     this.data = options.data;
 
-    this.dataId = 'Polygon';
+    this.dataId = 'LineString';
     this.dataStyle = options.style || {
       strokeColor: '#374046',
-      fillColor: '#374046',
-      fillOpacity: 0.5,
       strokeWeight: 2
     };
   }

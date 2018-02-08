@@ -2,6 +2,8 @@ import DrawingManager, { ToolId } from 'google-maps-drawing-tools';
 import Tool from '../src/tool';
 import CircleTool from '../src/tools/circle';
 import PolygonTool from '../src/tools/polygon';
+import LineTool from '../src/tools/line';
+
 
 let element = document.getElementById('map');
 let map = new google.maps.Map(element, {
@@ -36,4 +38,14 @@ QUnit.test('change tool to polygon activates the polygon tool', assert => {
   assert.ok(manager.tool, 'Tool object is set');
   assert.ok(manager.tool instanceof Tool, 'Is a tool class');
   assert.ok(manager.tool instanceof PolygonTool, 'Is a polygon tool class');
+});
+
+QUnit.test('change tool to line activates the line tool', assert => {
+  let manager = new DrawingManager({ map });
+
+  manager.changeTool(ToolId.Line);
+
+  assert.ok(manager.tool, 'Tool object is set');
+  assert.ok(manager.tool instanceof Tool, 'Is a tool class');
+  assert.ok(manager.tool instanceof LineTool, 'Is a line tool class');
 });

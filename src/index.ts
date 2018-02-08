@@ -1,5 +1,6 @@
 import Tool from './tool';
 import Circle from './tools/circle';
+import Line from './tools/line';
 import Polygon from './tools/polygon';
 
 export interface ManagerOptions {
@@ -9,7 +10,8 @@ export interface ManagerOptions {
 
 export enum ToolId {
   Circle = 'circle',
-  Polygon = 'polygon'
+  Polygon = 'polygon',
+  Line = 'line'
 }
 
 export default class DrawingManager {
@@ -27,10 +29,13 @@ export default class DrawingManager {
   changeTool(toolId: ToolId) {
     this.tool = this.createTool(toolId);
     this.data.setDrawingMode(null);
-    this.tool.activate();
+
+    if (this.tool) {
+      this.tool.activate();
+    }
   }
 
-  createTool(toolId: ToolId): Tool {
+  createTool(toolId: ToolId): (Tool | undefined) {
     switch (toolId) {
       case ToolId.Circle: {
         return new Circle({
@@ -45,6 +50,15 @@ export default class DrawingManager {
           data: this.data
         });
       }
+
+      case ToolId.Line: {
+        return new Line({
+          map: this.map,
+          data: this.data
+        });
+      }
     }
+
+    return undefined;
   }
 }
