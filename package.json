@@ -25,7 +25,7 @@
   "devDependencies": {
     "@types/googlemaps": "^3.30.5",
     "@types/qunit": "^2.0.31",
-    "ember-cli": "^2.14.2",
+    "ember-cli": "^2.18.2",
     "libkit": "^0.5.18",
     "qunitjs": "^2.4.0",
     "shelljs": "^0.7.8",
