@@ -2,8 +2,11 @@ import DrawingManager, { ToolId } from 'google-maps-drawing-tools';
 import Tool from '../src/tool';
 import CircleTool from '../src/tools/circle';
 
-let element = document.createElement('div');
-let map = new google.maps.Map(element);
+let element = document.getElementById('map');
+let map = new google.maps.Map(element, {
+  center: { lat: -34.397, lng: 150.644 },
+  zoom: 8
+});
 
 QUnit.module('google-maps-drawing-tools tests');
 

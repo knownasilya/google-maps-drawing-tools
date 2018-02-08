@@ -58,7 +58,8 @@ export default class CircleTool extends Tool {
 
     let dm = this.dm;
 
-    dm.setDrawingMode(null);
+    // "casting" to `any` because the typings are wrong in googlemaps
+    dm.setDrawingMode(null as any);
     dm.setMap(null);
 
     this.cleanupListeners();
@@ -69,9 +70,12 @@ export default class CircleTool extends Tool {
     let listener = dm.addListener('overlaycomplete', (event: google.maps.drawing.OverlayCompleteEvent) => {
       let feature = overlayToFeature(event.overlay);
 
-      event.overlay.setMap(null);
+      if (event.overlay instanceof google.maps.Circle || event.overlay instanceof google.maps.Rectangle) {
+        event.overlay.setMap(null);
+      }
 
       this.data.add(feature);
+      this.deactivate();
     });
 
     this.dmListener = listener;
