@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.2.0"></a>
+# [0.2.0](https://github.com/knownasilya/google-maps-drawing-tools/compare/v0.1.0...v0.2.0) (2018-02-08)
+
+
+### Features
+
+* add setMap and allow a null ToolId ([c70ed14](https://github.com/knownasilya/google-maps-drawing-tools/commit/c70ed14))
+
+
+
 <a name="0.1.0"></a>
 # 0.1.0 (2018-02-08)
 
