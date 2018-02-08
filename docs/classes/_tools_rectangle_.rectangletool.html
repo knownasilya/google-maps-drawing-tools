@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Tool | google-maps-drawing-tools</title>
+	<title>RectangleTool | google-maps-drawing-tools</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,13 +56,13 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="../modules/_tool_.html">&quot;tool&quot;</a>
+					<a href="../modules/_tools_rectangle_.html">&quot;tools/rectangle&quot;</a>
 				</li>
 				<li>
-					<a href="_tool_.tool.html">Tool</a>
+					<a href="_tools_rectangle_.rectangletool.html">RectangleTool</a>
 				</li>
 			</ul>
-			<h1>Class Tool</h1>
+			<h1>Class RectangleTool</h1>
 		</div>
 	</div>
 </header>
@@ -73,19 +73,10 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">Tool</span>
+						<a href="_tool_.tool.html" class="tsd-signature-type">Tool</a>
 						<ul class="tsd-hierarchy">
 							<li>
-								<a href="_tools_circle_.circletool.html" class="tsd-signature-type">CircleTool</a>
-							</li>
-							<li>
-								<a href="_tools_line_.linetool.html" class="tsd-signature-type">LineTool</a>
-							</li>
-							<li>
-								<a href="_tools_polygon_.polygontool.html" class="tsd-signature-type">PolygonTool</a>
-							</li>
-							<li>
-								<a href="_tools_rectangle_.rectangletool.html" class="tsd-signature-type">RectangleTool</a>
+								<span class="target">RectangleTool</span>
 							</li>
 						</ul>
 					</li>
@@ -98,20 +89,28 @@
 						<section class="tsd-index-section ">
 							<h3>Constructors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="_tool_.tool.html#constructor" class="tsd-kind-icon">constructor</a></li>
+								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite"><a href="_tools_rectangle_.rectangletool.html#constructor" class="tsd-kind-icon">constructor</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_tool_.tool.html#map" class="tsd-kind-icon">map</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_tools_rectangle_.rectangletool.html#data" class="tsd-kind-icon">data</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_tools_rectangle_.rectangletool.html#dm" class="tsd-kind-icon">dm</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_tools_rectangle_.rectangletool.html#dmid" class="tsd-kind-icon">dm<wbr>Id</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_tools_rectangle_.rectangletool.html#dmlistener" class="tsd-kind-icon">dm<wbr>Listener</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_tools_rectangle_.rectangletool.html#dmoptions" class="tsd-kind-icon">dm<wbr>Options</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_tools_rectangle_.rectangletool.html#id" class="tsd-kind-icon">id</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_tools_rectangle_.rectangletool.html#map" class="tsd-kind-icon">map</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_tool_.tool.html#activate" class="tsd-kind-icon">activate</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_tool_.tool.html#deactivate" class="tsd-kind-icon">deactivate</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="_tools_rectangle_.rectangletool.html#activate" class="tsd-kind-icon">activate</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_tools_rectangle_.rectangletool.html#cleanuplisteners" class="tsd-kind-icon">cleanup<wbr>Listeners</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="_tools_rectangle_.rectangletool.html#deactivate" class="tsd-kind-icon">deactivate</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_tools_rectangle_.rectangletool.html#setuplisteners" class="tsd-kind-icon">setup<wbr>Listeners</a></li>
 							</ul>
 						</section>
 					</div>
@@ -119,26 +118,27 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Constructors</h2>
-				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
-					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Tool<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">: </span><a href="../interfaces/_tool_.tooloptions.html" class="tsd-signature-type">ToolOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_tool_.tool.html" class="tsd-signature-type">Tool</a></li>
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Rectangle<wbr>Tool<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">: </span><a href="../interfaces/_tools_rectangle_.rectangletooloptions.html" class="tsd-signature-type">RectangleToolOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_tools_rectangle_.rectangletool.html" class="tsd-signature-type">RectangleTool</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Overrides <a href="_tool_.tool.html">Tool</a>.<a href="_tool_.tool.html#constructor">constructor</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/knownasilya/google-maps-drawing-tools/blob/9ae41cf/src/tool.ts#L6">tool.ts:6</a></li>
+									<li>Defined in <a href="https://github.com/knownasilya/google-maps-drawing-tools/blob/9ae41cf/src/tools/rectangle.ts#L16">tools/rectangle.ts:16</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>options: <a href="../interfaces/_tool_.tooloptions.html" class="tsd-signature-type">ToolOptions</a></h5>
+									<h5>options: <a href="../interfaces/_tools_rectangle_.rectangletooloptions.html" class="tsd-signature-type">RectangleToolOptions</a></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="_tool_.tool.html" class="tsd-signature-type">Tool</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="_tools_rectangle_.rectangletool.html" class="tsd-signature-type">RectangleTool</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -146,10 +146,71 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="data" class="tsd-anchor"></a>
+					<h3>data</h3>
+					<div class="tsd-signature tsd-kind-icon">data<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Data</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/knownasilya/google-maps-drawing-tools/blob/9ae41cf/src/tools/rectangle.ts#L11">tools/rectangle.ts:11</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="dm" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> dm</h3>
+					<div class="tsd-signature tsd-kind-icon">dm<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">DrawingManager</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/knownasilya/google-maps-drawing-tools/blob/9ae41cf/src/tools/rectangle.ts#L14">tools/rectangle.ts:14</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="dmid" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> dm<wbr>Id</h3>
+					<div class="tsd-signature tsd-kind-icon">dm<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">OverlayType</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/knownasilya/google-maps-drawing-tools/blob/9ae41cf/src/tools/rectangle.ts#L13">tools/rectangle.ts:13</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="dmlistener" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> <span class="tsd-flag ts-flagOptional">Optional</span> dm<wbr>Listener</h3>
+					<div class="tsd-signature tsd-kind-icon">dm<wbr>Listener<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">google.maps.MapsEventListener</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/knownasilya/google-maps-drawing-tools/blob/9ae41cf/src/tools/rectangle.ts#L16">tools/rectangle.ts:16</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="dmoptions" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> dm<wbr>Options</h3>
+					<div class="tsd-signature tsd-kind-icon">dm<wbr>Options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">CircleOptions</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/knownasilya/google-maps-drawing-tools/blob/9ae41cf/src/tools/rectangle.ts#L15">tools/rectangle.ts:15</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="id" class="tsd-anchor"></a>
+					<h3>id</h3>
+					<div class="tsd-signature tsd-kind-icon">id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/knownasilya/google-maps-drawing-tools/blob/9ae41cf/src/tools/rectangle.ts#L10">tools/rectangle.ts:10</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 					<a name="map" class="tsd-anchor"></a>
 					<h3>map</h3>
 					<div class="tsd-signature tsd-kind-icon">map<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Map</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></div>
 					<aside class="tsd-sources">
+						<p>Inherited from <a href="_tool_.tool.html">Tool</a>.<a href="_tool_.tool.html#map">map</a></p>
 						<ul>
 							<li>Defined in <a href="https://github.com/knownasilya/google-maps-drawing-tools/blob/9ae41cf/src/tool.ts#L6">tool.ts:6</a></li>
 						</ul>
@@ -158,17 +219,18 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
 					<a name="activate" class="tsd-anchor"></a>
 					<h3>activate</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
 						<li class="tsd-signature tsd-kind-icon">activate<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Overrides <a href="_tool_.tool.html">Tool</a>.<a href="_tool_.tool.html#activate">activate</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/knownasilya/google-maps-drawing-tools/blob/9ae41cf/src/tool.ts#L12">tool.ts:12</a></li>
+									<li>Defined in <a href="https://github.com/knownasilya/google-maps-drawing-tools/blob/9ae41cf/src/tools/rectangle.ts#L40">tools/rectangle.ts:40</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -176,16 +238,51 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="deactivate" class="tsd-anchor"></a>
-					<h3>deactivate</h3>
+					<a name="cleanuplisteners" class="tsd-anchor"></a>
+					<h3>cleanup<wbr>Listeners</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">deactivate<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">cleanup<wbr>Listeners<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/knownasilya/google-maps-drawing-tools/blob/9ae41cf/src/tool.ts#L19">tool.ts:19</a></li>
+									<li>Defined in <a href="https://github.com/knownasilya/google-maps-drawing-tools/blob/9ae41cf/src/tools/rectangle.ts#L82">tools/rectangle.ts:82</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+					<a name="deactivate" class="tsd-anchor"></a>
+					<h3>deactivate</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+						<li class="tsd-signature tsd-kind-icon">deactivate<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Overrides <a href="_tool_.tool.html">Tool</a>.<a href="_tool_.tool.html#deactivate">deactivate</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/knownasilya/google-maps-drawing-tools/blob/9ae41cf/src/tools/rectangle.ts#L54">tools/rectangle.ts:54</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="setuplisteners" class="tsd-anchor"></a>
+					<h3>setup<wbr>Listeners</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">setup<wbr>Listeners<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/knownasilya/google-maps-drawing-tools/blob/9ae41cf/src/tools/rectangle.ts#L66">tools/rectangle.ts:66</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -203,7 +300,7 @@
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/_index_.html">"index"</a>
 					</li>
-					<li class="current tsd-kind-external-module">
+					<li class=" tsd-kind-external-module">
 						<a href="../modules/_tool_.html">"tool"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
@@ -215,7 +312,7 @@
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/_tools_polygon_.html">"tools/polygon"</a>
 					</li>
-					<li class=" tsd-kind-external-module">
+					<li class="current tsd-kind-external-module">
 						<a href="../modules/_tools_rectangle_.html">"tools/rectangle"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
@@ -237,26 +334,50 @@
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-class tsd-parent-kind-external-module">
-						<a href="_tool_.tool.html" class="tsd-kind-icon">Tool</a>
+						<a href="_tools_rectangle_.rectangletool.html" class="tsd-kind-icon">Rectangle<wbr>Tool</a>
 						<ul>
-							<li class=" tsd-kind-constructor tsd-parent-kind-class">
-								<a href="_tool_.tool.html#constructor" class="tsd-kind-icon">constructor</a>
+							<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
+								<a href="_tools_rectangle_.rectangletool.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="_tool_.tool.html#map" class="tsd-kind-icon">map</a>
+								<a href="_tools_rectangle_.rectangletool.html#data" class="tsd-kind-icon">data</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="_tools_rectangle_.rectangletool.html#dm" class="tsd-kind-icon">dm</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="_tools_rectangle_.rectangletool.html#dmid" class="tsd-kind-icon">dm<wbr>Id</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="_tools_rectangle_.rectangletool.html#dmlistener" class="tsd-kind-icon">dm<wbr>Listener</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="_tools_rectangle_.rectangletool.html#dmoptions" class="tsd-kind-icon">dm<wbr>Options</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_tools_rectangle_.rectangletool.html#id" class="tsd-kind-icon">id</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="_tools_rectangle_.rectangletool.html#map" class="tsd-kind-icon">map</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+								<a href="_tools_rectangle_.rectangletool.html#activate" class="tsd-kind-icon">activate</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="_tool_.tool.html#activate" class="tsd-kind-icon">activate</a>
+								<a href="_tools_rectangle_.rectangletool.html#cleanuplisteners" class="tsd-kind-icon">cleanup<wbr>Listeners</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+								<a href="_tools_rectangle_.rectangletool.html#deactivate" class="tsd-kind-icon">deactivate</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="_tool_.tool.html#deactivate" class="tsd-kind-icon">deactivate</a>
+								<a href="_tools_rectangle_.rectangletool.html#setuplisteners" class="tsd-kind-icon">setup<wbr>Listeners</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
-						<a href="../interfaces/_tool_.tooloptions.html" class="tsd-kind-icon">Tool<wbr>Options</a>
+						<a href="../interfaces/_tools_rectangle_.rectangletooloptions.html" class="tsd-kind-icon">Rectangle<wbr>Tool<wbr>Options</a>
 					</li>
 				</ul>
 			</nav>
