@@ -4,6 +4,12 @@ Have you noticed that Google Maps has two ways to draw and both have different o
 library tries to have a unified way to draw that allows exporting geojson and restoring drawings from
 existing geojson.
 
+## Install
+
+```sh
+npm install --save google-maps-drawing-tools
+```
+
 ## Usage
 
 ```js
