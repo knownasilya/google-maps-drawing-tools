@@ -2,6 +2,7 @@ import Tool from './tool';
 import Circle from './tools/circle';
 import Line from './tools/line';
 import Polygon from './tools/polygon';
+import Rectangle from './tools/rectangle';
 
 export interface ManagerOptions {
   /**
@@ -18,7 +19,8 @@ export interface ManagerOptions {
 export enum ToolId {
   Circle = 'circle',
   Polygon = 'polygon',
-  Line = 'line'
+  Line = 'line',
+  Rectangle = 'rectangle'
 }
 
 export default class DrawingManager {
@@ -70,6 +72,13 @@ export default class DrawingManager {
 
       case ToolId.Line: {
         return new Line({
+          map: this.map,
+          data: this.data
+        });
+      }
+
+      case ToolId.Rectangle: {
+        return new Rectangle({
           map: this.map,
           data: this.data
         });

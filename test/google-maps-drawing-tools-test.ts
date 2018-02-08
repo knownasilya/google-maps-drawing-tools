@@ -1,8 +1,9 @@
 import DrawingManager, { ToolId } from 'google-maps-drawing-tools';
 import Tool from '../src/tool';
 import CircleTool from '../src/tools/circle';
-import PolygonTool from '../src/tools/polygon';
 import LineTool from '../src/tools/line';
+import PolygonTool from '../src/tools/polygon';
+import RectangleTool from '../src/tools/rectangle';
 
 
 let element = document.getElementById('map');
@@ -48,4 +49,14 @@ QUnit.test('change tool to line activates the line tool', assert => {
   assert.ok(manager.tool, 'Tool object is set');
   assert.ok(manager.tool instanceof Tool, 'Is a tool class');
   assert.ok(manager.tool instanceof LineTool, 'Is a line tool class');
+});
+
+QUnit.test('change tool to rectangle activates the rectangle tool', assert => {
+  let manager = new DrawingManager({ map });
+
+  manager.changeTool(ToolId.Rectangle);
+
+  assert.ok(manager.tool, 'Tool object is set');
+  assert.ok(manager.tool instanceof Tool, 'Is a tool class');
+  assert.ok(manager.tool instanceof RectangleTool, 'Is a rectangle tool class');
 });
