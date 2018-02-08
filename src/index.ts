@@ -4,7 +4,14 @@ import Line from './tools/line';
 import Polygon from './tools/polygon';
 
 export interface ManagerOptions {
+  /**
+   * Recommended to set here, but can also be set via `setMap`.
+   */
   map?: google.maps.Map;
+  /**
+   * Pass in your own `google.maps.Data` instance to put the drawings
+   * on.
+   */
   data?: google.maps.Data;
 }
 
