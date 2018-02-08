@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.3.0"></a>
+# [0.3.0](https://github.com/knownasilya/google-maps-drawing-tools/compare/v0.2.0...v0.3.0) (2018-02-08)
+
+
+### Bug Fixes
+
+* document manager option types ([de321c7](https://github.com/knownasilya/google-maps-drawing-tools/commit/de321c7))
+* make the manager map of the right type ([4089dcb](https://github.com/knownasilya/google-maps-drawing-tools/commit/4089dcb))
+
+
+### Features
+
+* add a rectangle tool ([2bfa71f](https://github.com/knownasilya/google-maps-drawing-tools/commit/2bfa71f))
+
+
+
 <a name="0.2.0"></a>
 # [0.2.0](https://github.com/knownasilya/google-maps-drawing-tools/compare/v0.1.0...v0.2.0) (2018-02-08)
 
