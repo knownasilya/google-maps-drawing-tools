@@ -24,7 +24,8 @@ export default class LineTool extends Tool {
     this.dataId = 'LineString';
     this.dataStyle = options.style || {
       strokeColor: '#374046',
-      strokeWeight: 2
+      strokeWeight: 2,
+      clickable: false
     };
   }
 

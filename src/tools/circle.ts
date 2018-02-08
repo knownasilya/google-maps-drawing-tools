@@ -3,14 +3,7 @@ import overlayToFeature from '../utils/overlay-to-feature';
 
 export interface CircleToolOptions extends ToolOptions {
   data: google.maps.Data;
-  style?: CircleStyles;
-}
-
-export interface CircleStyles {
-  strokeColor: string;
-  fillColor: string;
-  fillOpacity: number;
-  strokeWeight: number;
+  style?: google.maps.CircleOptions;
 }
 
 export default class CircleTool extends Tool {
@@ -36,7 +29,8 @@ export default class CircleTool extends Tool {
       strokeColor: '#374046',
       fillColor: '#374046',
       fillOpacity: 0.5,
-      strokeWeight: 2
+      strokeWeight: 2,
+      clickable: false
     };
   }
 

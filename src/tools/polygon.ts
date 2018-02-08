@@ -26,7 +26,8 @@ export default class PolygonTool extends Tool {
       strokeColor: '#374046',
       fillColor: '#374046',
       fillOpacity: 0.5,
-      strokeWeight: 2
+      strokeWeight: 2,
+      clickable: false
     };
   }
 
