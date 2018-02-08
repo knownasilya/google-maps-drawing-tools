@@ -3,7 +3,7 @@ export interface ToolOptions {
 }
 
 export default class Tool {
-  map: google.maps.Map;
+  map: google.maps.Map | null;
 
   constructor(options: ToolOptions) {
     this.map = options.map;
@@ -11,11 +11,15 @@ export default class Tool {
 
   activate() {
     // TODO
-    this.map.setOptions({ draggableCursor: 'crosshair' });
+    if (this.map) {
+      this.map.setOptions({ draggableCursor: 'crosshair' });
+    }
   }
 
   deactivate() {
     // TODO
-    this.map.setOptions({ draggableCursor: 'default' });
+    if (this.map) {
+      this.map.setOptions({ draggableCursor: 'default' });
+    }
   }
 }

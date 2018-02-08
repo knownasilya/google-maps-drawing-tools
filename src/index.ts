@@ -26,7 +26,12 @@ export default class DrawingManager {
     this.data.setMap(this.map);
   }
 
-  changeTool(toolId: ToolId) {
+  /**
+   * Change to a specified tool which will be used to draw on the map.
+   *
+   * @param toolId The identifier of the tool to change to
+   */
+  changeTool(toolId: ToolId | null) {
     this.tool = this.createTool(toolId);
     this.data.setDrawingMode(null);
 
@@ -35,7 +40,12 @@ export default class DrawingManager {
     }
   }
 
-  createTool(toolId: ToolId): (Tool | undefined) {
+  /**
+   * Create a tool based on it's id.
+   *
+   * @param toolId The tool to create, by id
+   */
+  createTool(toolId: ToolId | null): (Tool | undefined) {
     switch (toolId) {
       case ToolId.Circle: {
         return new Circle({
@@ -60,5 +70,19 @@ export default class DrawingManager {
     }
 
     return undefined;
+  }
+
+  /**
+   * Show or hide the drawings by changing the map.
+   *
+   * @param map Google Map instance on which to show the drawings
+   */
+  setMap(map: google.maps.Map | null) {
+    this.map = map;
+    this.data.setMap(map);
+
+    if (this.tool) {
+      this.tool.map = map;
+    }
   }
 }
