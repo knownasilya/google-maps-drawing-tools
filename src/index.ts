@@ -4,7 +4,7 @@ import Line from './tools/line';
 import Polygon from './tools/polygon';
 
 export interface ManagerOptions {
-  map?: any;
+  map?: google.maps.Map;
   data?: google.maps.Data;
 }
 
