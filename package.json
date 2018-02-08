@@ -31,6 +31,7 @@
     "qunitjs": "^2.4.0",
     "shelljs": "^0.7.8",
     "tslint": "^5.7.0",
+    "typedoc": "^0.10.0",
     "typescript": "^2.4.2"
   },
   "dependencies": {
