@@ -1,5 +1,6 @@
 import Tool from './tool';
 import Circle from './tools/circle';
+import Polygon from './tools/polygon';
 
 export interface ManagerOptions {
   map?: any;
@@ -7,7 +8,8 @@ export interface ManagerOptions {
 }
 
 export enum ToolId {
-  Circle = 'circle'
+  Circle = 'circle',
+  Polygon = 'polygon'
 }
 
 export default class DrawingManager {
@@ -18,6 +20,8 @@ export default class DrawingManager {
   constructor(options: ManagerOptions = {}) {
     this.map = options.map;
     this.data = options.data || new google.maps.Data();
+
+    this.data.setMap(this.map);
   }
 
   changeTool(toolId: ToolId) {
@@ -30,6 +34,13 @@ export default class DrawingManager {
     switch (toolId) {
       case ToolId.Circle: {
         return new Circle({
+          map: this.map,
+          data: this.data
+        });
+      }
+
+      case ToolId.Polygon: {
+        return new Polygon({
           map: this.map,
           data: this.data
         });
