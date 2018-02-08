@@ -1,7 +1,7 @@
 {
   "name": "google-maps-drawing-tools",
   "version": "0.1.0",
-  "description": "A brand new TypeScript library.",
+  "description": "Unified drawing tools for Google Maps",
   "main": "dist/commonjs/src/index.js",
   "module": "dist/modules/src/index.js",
   "types": "dist/types/src/index.d.ts",
@@ -9,7 +9,14 @@
     "main": "ember-addon.js"
   },
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "google-maps",
+    "drawing",
+    "markup",
+    "polygon",
+    "circle",
+    "line",
+    "geojson"
   ],
   "scripts": {
     "release": "standard-version",
