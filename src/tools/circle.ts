@@ -32,6 +32,9 @@ export default class CircleTool extends Tool {
       strokeWeight: 2,
       clickable: false
     };
+
+    // TODO: should we have a temp data layer as well?
+    this.data.setStyle(this.dmOptions);
   }
 
   activate() {
