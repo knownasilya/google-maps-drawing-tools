@@ -16,6 +16,9 @@ export interface ManagerOptions {
   data?: google.maps.Data;
 }
 
+/**
+ * Available tool ids to use for `manager.changeTool`.
+ */
 export enum ToolId {
   Circle = 'circle',
   Polygon = 'polygon',
@@ -26,6 +29,10 @@ export enum ToolId {
 export default class DrawingManager {
   map: any;
   data: google.maps.Data;
+
+  /**
+   * The currently selected tool.
+   */
   tool?: Tool;
 
   constructor(options: ManagerOptions = {}) {
@@ -41,6 +48,10 @@ export default class DrawingManager {
    * @param toolId The identifier of the tool to change to
    */
   changeTool(toolId: ToolId | null) {
+    if (this.tool) {
+      this.tool.deactivate();
+    }
+
     this.tool = this.createTool(toolId);
     this.data.setDrawingMode(null);
 
