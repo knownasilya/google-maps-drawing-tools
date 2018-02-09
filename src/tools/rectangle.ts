@@ -73,6 +73,7 @@ export default class RectangleTool extends Tool {
         event.overlay.setMap(null);
       }
 
+      this.feature = feature;
       this.data.add(feature);
       this.deactivate();
     });
@@ -81,6 +82,8 @@ export default class RectangleTool extends Tool {
   }
 
   private cleanupListeners() {
+    this.feature = undefined;
+
     if (this.dmListener) {
       google.maps.event.removeListener(this.dmListener);
     }

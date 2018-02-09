@@ -47,7 +47,8 @@ export default class LineTool extends Tool {
   }
 
   private setupListeners() {
-    let listener = this.data.addListener('addfeature', () => {
+    let listener = this.data.addListener('addfeature', ({ feature }) => {
+      this.feature = feature;
       this.deactivate();
     });
 
@@ -55,6 +56,8 @@ export default class LineTool extends Tool {
   }
 
   private cleanupListeners() {
+    this.feature = undefined;
+
     if (this.dataListener) {
       google.maps.event.removeListener(this.dataListener);
     }

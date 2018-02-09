@@ -1,3 +1,5 @@
+import guid from './utils/guid';
+
 /**
  * Base class for all tools
  */
@@ -12,13 +14,20 @@ export enum ToolId {
   Rectangle = 'rectangle'
 }
 
+export interface Shape {
+  id: string;
+  toolType?: ToolId;
+  feature?: google.maps.Data.Feature;
+}
+
 export interface ToolOptions {
   map: google.maps.Map;
 }
 
-export default class Tool {
-  id?: ToolId;
+export default abstract class Tool {
   map: google.maps.Map | null;
+  id?: ToolId;
+  feature?: google.maps.Data.Feature;
 
   constructor(options: ToolOptions) {
     this.map = options.map;
@@ -36,5 +45,13 @@ export default class Tool {
     if (this.map) {
       this.map.setOptions({ draggableCursor: 'default' });
     }
+  }
+
+  get shape(): Shape {
+    return {
+      id: guid(),
+      toolType: this.id,
+      feature: this.feature
+    };
   }
 }
