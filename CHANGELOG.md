@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.6.0"></a>
+# [0.6.0](https://github.com/knownasilya/google-maps-drawing-tools/compare/v0.5.0...v0.6.0) (2018-02-09)
+
+
+### Bug Fixes
+
+* return shape object that is updatable, and add a way to set the feature and get it from the tool. ([d58da60](https://github.com/knownasilya/google-maps-drawing-tools/commit/d58da60))
+
+
+### Features
+
+* add marker tool ([4978106](https://github.com/knownasilya/google-maps-drawing-tools/commit/4978106))
+
+
+
 <a name="0.5.0"></a>
 # [0.5.0](https://github.com/knownasilya/google-maps-drawing-tools/compare/v0.4.0...v0.5.0) (2018-02-09)
 

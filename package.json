@@ -1,6 +1,6 @@
 {
   "name": "google-maps-drawing-tools",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Unified drawing tools for Google Maps",
   "main": "dist/commonjs/src/index.js",
   "module": "dist/modules/src/index.js",
