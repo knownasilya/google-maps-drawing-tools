@@ -14,6 +14,12 @@ export enum ToolId {
   Rectangle = 'rectangle'
 }
 
+/**
+ * Object representing the shape in progress or completed.
+ *
+ * When the shape is completed, this object will have it's `feature` attribute
+ * filled in.
+ */
 export interface Shape {
   id: string;
   toolType?: ToolId;

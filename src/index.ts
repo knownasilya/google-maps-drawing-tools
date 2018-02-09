@@ -1,4 +1,4 @@
-import Tool, { ToolId } from './tool';
+import Tool, { Shape, ToolId } from './tool';
 import Circle from './tools/circle';
 import Line from './tools/line';
 import Polygon from './tools/polygon';
@@ -37,7 +37,7 @@ export default class DrawingManager {
    *
    * @param toolId The identifier of the tool to change to
    */
-  changeTool(toolId: ToolId | null) {
+  changeTool(toolId: ToolId | null): Shape | undefined {
     if (this.tool) {
       this.tool.deactivate();
     }
@@ -46,8 +46,10 @@ export default class DrawingManager {
     this.data.setDrawingMode(null);
 
     if (this.tool) {
-      this.tool.activate();
+      return this.tool.activate();
     }
+
+    return undefined;
   }
 
   /**

@@ -1,10 +1,9 @@
-import DrawingManager, { ToolId } from 'google-maps-drawing-tools';
-import Tool from '../src/tool';
+import DrawingManager from 'google-maps-drawing-tools';
+import Tool, { ToolId } from '../src/tool';
 import CircleTool from '../src/tools/circle';
 import LineTool from '../src/tools/line';
 import PolygonTool from '../src/tools/polygon';
 import RectangleTool from '../src/tools/rectangle';
-
 
 let element = document.getElementById('map');
 let map = new google.maps.Map(element, {
