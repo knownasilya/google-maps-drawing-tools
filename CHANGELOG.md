@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.3.1"></a>
+## [0.3.1](https://github.com/knownasilya/google-maps-drawing-tools/compare/v0.3.0...v0.3.1) (2018-02-09)
+
+
+### Bug Fixes
+
+* **manager:** deactivate current tool when changing tools ([0990af8](https://github.com/knownasilya/google-maps-drawing-tools/commit/0990af8))
+
+
+
 <a name="0.3.0"></a>
 # [0.3.0](https://github.com/knownasilya/google-maps-drawing-tools/compare/v0.2.0...v0.3.0) (2018-02-08)
 
