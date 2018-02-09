@@ -22,7 +22,7 @@
     "release": "standard-version",
     "docs": "typedoc --out docs/ ./src && touch docs/.nojekyll",
     "problems": "node ./scripts/problems.js",
-    "prerelease": "npm run test && npm run docs && git add . && git commit -m 'docs: build docs'",
+    "prerelease": "npm run test && npm run docs && git add docs/ && git commit -m 'docs: build docs'",
     "prepack": "ember build -prod",
     "build": "ember build -prod",
     "build-tests": "ember build",
