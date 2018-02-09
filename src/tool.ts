@@ -33,7 +33,9 @@ export interface ToolOptions {
 export default abstract class Tool {
   map: google.maps.Map | null;
   id?: ToolId;
-  feature?: google.maps.Data.Feature;
+  shape?: Shape;
+
+  private _feature?: google.maps.Data.Feature;
 
   constructor(options: ToolOptions) {
     this.map = options.map;
@@ -45,6 +47,12 @@ export default abstract class Tool {
       this.map.setOptions({ draggableCursor: 'crosshair' });
     }
 
+    this.shape = {
+      id: guid(),
+      toolType: this.id,
+      feature: this.feature
+    };
+
     return this.shape;
   }
 
@@ -55,11 +63,19 @@ export default abstract class Tool {
     }
   }
 
-  get shape(): Shape {
-    return {
-      id: guid(),
-      toolType: this.id,
-      feature: this.feature
-    };
+  set feature(feature: google.maps.Data.Feature | undefined) {
+    if (feature && this.shape) {
+      feature.setProperty('id', this.shape.id);
+    }
+
+    if (this.shape) {
+      this.shape.feature = feature;
+    }
+
+    this._feature = feature;
+  }
+
+  get feature(): google.maps.Data.Feature | undefined {
+    return this._feature;
   }
 }

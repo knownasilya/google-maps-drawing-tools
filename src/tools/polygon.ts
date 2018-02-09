@@ -56,12 +56,11 @@ export default class PolygonTool extends Tool {
       this.deactivate();
     });
 
+    this.feature = undefined;
     this.dataListener = listener;
   }
 
   private cleanupListeners() {
-    this.feature = undefined;
-
     if (this.dataListener) {
       google.maps.event.removeListener(this.dataListener);
     }

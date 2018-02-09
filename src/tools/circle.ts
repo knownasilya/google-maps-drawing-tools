@@ -79,12 +79,11 @@ export default class CircleTool extends Tool {
       this.deactivate();
     });
 
+    this.feature = undefined;
     this.dmListener = listener;
   }
 
   private cleanupListeners() {
-    this.feature = undefined;
-
     if (this.dmListener) {
       google.maps.event.removeListener(this.dmListener);
     }
