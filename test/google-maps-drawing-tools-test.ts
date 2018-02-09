@@ -4,6 +4,7 @@ import CircleTool from '../src/tools/circle';
 import LineTool from '../src/tools/line';
 import PolygonTool from '../src/tools/polygon';
 import RectangleTool from '../src/tools/rectangle';
+import MarkerTool from '../src/tools/marker';
 
 let element = document.getElementById('map');
 let map = new google.maps.Map(element, {
@@ -73,5 +74,19 @@ QUnit.test('change tool to rectangle activates the rectangle tool', assert => {
 
   if (shape) {
     assert.equal(shape.toolType, ToolId.Rectangle, 'Shape tool type set');
+  }
+});
+
+QUnit.test('change tool to marker activates the marker tool', assert => {
+  let manager = new DrawingManager({ map });
+  let shape = manager.changeTool(ToolId.Marker);
+
+  assert.ok(manager.tool, 'Tool object is set');
+  assert.ok(manager.tool instanceof Tool, 'Is a tool class');
+  assert.ok(manager.tool instanceof MarkerTool, 'Is a marker tool class');
+  assert.ok(shape, 'shape exists');
+
+  if (shape) {
+    assert.equal(shape.toolType, ToolId.Marker, 'Shape tool type set');
   }
 });

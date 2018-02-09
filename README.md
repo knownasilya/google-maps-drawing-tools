@@ -33,8 +33,6 @@ manager.data.toGeoJson((geojson) => {
 
 ## TODO
 
-- [ ] Add Rectangle
-- [ ] Add Marker
 - [ ] Add Text Label
 - [ ] Add measurement option
 - [ ] Add measurement units option

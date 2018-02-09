@@ -8,6 +8,7 @@ import guid from './utils/guid';
  * Available tool ids to use for `manager.changeTool`.
  */
 export enum ToolId {
+  Marker = 'marker',
   Circle = 'circle',
   Polygon = 'polygon',
   Line = 'line',

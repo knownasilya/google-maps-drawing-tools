@@ -1,6 +1,7 @@
 import Tool, { Shape, ToolId } from './tool';
 import Circle from './tools/circle';
 import Line from './tools/line';
+import Marker from './tools/marker';
 import Polygon from './tools/polygon';
 import Rectangle from './tools/rectangle';
 
@@ -82,6 +83,13 @@ export default class DrawingManager {
 
       case ToolId.Rectangle: {
         return new Rectangle({
+          map: this.map,
+          data: this.data
+        });
+      }
+
+      case ToolId.Marker: {
+        return new Marker({
           map: this.map,
           data: this.data
         });
