@@ -22,40 +22,52 @@ QUnit.test('instantiates', assert => {
 
 QUnit.test('change tool to circle activates the circle tool', assert => {
   let manager = new DrawingManager({ map });
-
-  manager.changeTool(ToolId.Circle);
+  let shape = manager.changeTool(ToolId.Circle);
 
   assert.ok(manager.tool, 'Tool object is set');
   assert.ok(manager.tool instanceof Tool, 'Is a tool class');
   assert.ok(manager.tool instanceof CircleTool, 'Is a circle tool class');
+
+  if (shape) {
+    assert.equal(shape.toolType, ToolId.Circle, 'Shape tool type set');
+  }
 });
 
 QUnit.test('change tool to polygon activates the polygon tool', assert => {
   let manager = new DrawingManager({ map });
-
-  manager.changeTool(ToolId.Polygon);
+  let shape = manager.changeTool(ToolId.Polygon);
 
   assert.ok(manager.tool, 'Tool object is set');
   assert.ok(manager.tool instanceof Tool, 'Is a tool class');
   assert.ok(manager.tool instanceof PolygonTool, 'Is a polygon tool class');
+
+  if (shape) {
+    assert.equal(shape.toolType, ToolId.Polygon, 'Shape tool type set');
+  }
 });
 
 QUnit.test('change tool to line activates the line tool', assert => {
   let manager = new DrawingManager({ map });
-
-  manager.changeTool(ToolId.Line);
+  let shape = manager.changeTool(ToolId.Line);
 
   assert.ok(manager.tool, 'Tool object is set');
   assert.ok(manager.tool instanceof Tool, 'Is a tool class');
   assert.ok(manager.tool instanceof LineTool, 'Is a line tool class');
+
+  if (shape) {
+    assert.equal(shape.toolType, ToolId.Line, 'Shape tool type set');
+  }
 });
 
 QUnit.test('change tool to rectangle activates the rectangle tool', assert => {
   let manager = new DrawingManager({ map });
-
-  manager.changeTool(ToolId.Rectangle);
+  let shape = manager.changeTool(ToolId.Rectangle);
 
   assert.ok(manager.tool, 'Tool object is set');
   assert.ok(manager.tool instanceof Tool, 'Is a tool class');
   assert.ok(manager.tool instanceof RectangleTool, 'Is a rectangle tool class');
+
+  if (shape) {
+    assert.equal(shape.toolType, ToolId.Rectangle, 'Shape tool type set');
+  }
 });
