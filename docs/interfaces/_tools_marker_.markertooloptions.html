@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>&quot;tools/line&quot; | google-maps-drawing-tools</title>
+	<title>MarkerToolOptions | google-maps-drawing-tools</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,50 +56,77 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="_tools_line_.html">&quot;tools/line&quot;</a>
+					<a href="../modules/_tools_marker_.html">&quot;tools/marker&quot;</a>
+				</li>
+				<li>
+					<a href="_tools_marker_.markertooloptions.html">MarkerToolOptions</a>
 				</li>
 			</ul>
-			<h1>External module &quot;tools/line&quot;</h1>
+			<h1>Interface MarkerToolOptions</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-hierarchy">
+				<h3>Hierarchy</h3>
+				<ul class="tsd-hierarchy">
+					<li>
+						<a href="_tool_.tooloptions.html" class="tsd-signature-type">ToolOptions</a>
+						<ul class="tsd-hierarchy">
+							<li>
+								<span class="target">MarkerToolOptions</span>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
-							<h3>Classes</h3>
+							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-class tsd-parent-kind-external-module"><a href="../classes/_tools_line_.linetool.html" class="tsd-kind-icon">Line<wbr>Tool</a></li>
-							</ul>
-						</section>
-						<section class="tsd-index-section ">
-							<h3>Interfaces</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-interface tsd-parent-kind-external-module"><a href="../interfaces/_tools_line_.linetooloptions.html" class="tsd-kind-icon">Line<wbr>Tool<wbr>Options</a></li>
-							</ul>
-						</section>
-						<section class="tsd-index-section ">
-							<h3>Type aliases</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-type-alias tsd-parent-kind-external-module"><a href="_tools_line_.html#drawingmode" class="tsd-kind-icon">Drawing<wbr>Mode</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_tools_marker_.markertooloptions.html#data" class="tsd-kind-icon">data</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="_tools_marker_.markertooloptions.html#map" class="tsd-kind-icon">map</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_tools_marker_.markertooloptions.html#style" class="tsd-kind-icon">style</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Type aliases</h2>
-				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module">
-					<a name="drawingmode" class="tsd-anchor"></a>
-					<h3>Drawing<wbr>Mode</h3>
-					<div class="tsd-signature tsd-kind-icon">Drawing<wbr>Mode<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"Point"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"LineString"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Polygon"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></div>
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="data" class="tsd-anchor"></a>
+					<h3>data</h3>
+					<div class="tsd-signature tsd-kind-icon">data<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Data</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/knownasilya/google-maps-drawing-tools/blob/4978106/src/tools/line.ts#L8">tools/line.ts:8</a></li>
+							<li>Defined in <a href="https://github.com/knownasilya/google-maps-drawing-tools/blob/4978106/src/tools/marker.ts#L4">tools/marker.ts:4</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="map" class="tsd-anchor"></a>
+					<h3>map</h3>
+					<div class="tsd-signature tsd-kind-icon">map<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Map</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="_tool_.tooloptions.html">ToolOptions</a>.<a href="_tool_.tooloptions.html#map">map</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/knownasilya/google-maps-drawing-tools/blob/4978106/src/tool.ts#L31">tool.ts:31</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="style" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> style</h3>
+					<div class="tsd-signature tsd-kind-icon">style<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">google.maps.Data.StyleOptions</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/knownasilya/google-maps-drawing-tools/blob/4978106/src/tools/marker.ts#L5">tools/marker.ts:5</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -112,50 +139,65 @@
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_index_.html">"index"</a>
+						<a href="../modules/_index_.html">"index"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_tool_.html">"tool"</a>
+						<a href="../modules/_tool_.html">"tool"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_tools_circle_.html">"tools/circle"</a>
+						<a href="../modules/_tools_circle_.html">"tools/circle"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_tools_line_.html">"tools/line"</a>
 					</li>
 					<li class="current tsd-kind-external-module">
-						<a href="_tools_line_.html">"tools/line"</a>
+						<a href="../modules/_tools_marker_.html">"tools/marker"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_tools_marker_.html">"tools/marker"</a>
+						<a href="../modules/_tools_polygon_.html">"tools/polygon"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_tools_polygon_.html">"tools/polygon"</a>
+						<a href="../modules/_tools_rectangle_.html">"tools/rectangle"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_tools_rectangle_.html">"tools/rectangle"</a>
+						<a href="../modules/_utils_create_circle_.html">"utils/create-<wbr>circle"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_utils_create_circle_.html">"utils/create-<wbr>circle"</a>
+						<a href="../modules/_utils_create_feature_.html">"utils/create-<wbr>feature"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_utils_create_feature_.html">"utils/create-<wbr>feature"</a>
+						<a href="../modules/_utils_guid_.html">"utils/guid"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_utils_guid_.html">"utils/guid"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_utils_overlay_to_feature_.html">"utils/overlay-<wbr>to-<wbr>feature"</a>
+						<a href="../modules/_utils_overlay_to_feature_.html">"utils/overlay-<wbr>to-<wbr>feature"</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-class tsd-parent-kind-external-module">
-						<a href="../classes/_tools_line_.linetool.html" class="tsd-kind-icon">Line<wbr>Tool</a>
+						<a href="../classes/_tools_marker_.polygontool.html" class="tsd-kind-icon">Polygon<wbr>Tool</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
-						<a href="../interfaces/_tools_line_.linetooloptions.html" class="tsd-kind-icon">Line<wbr>Tool<wbr>Options</a>
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-interface tsd-parent-kind-external-module">
+						<a href="_tools_marker_.markertooloptions.html" class="tsd-kind-icon">Marker<wbr>Tool<wbr>Options</a>
+						<ul>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_tools_marker_.markertooloptions.html#data" class="tsd-kind-icon">data</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="_tools_marker_.markertooloptions.html#map" class="tsd-kind-icon">map</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_tools_marker_.markertooloptions.html#style" class="tsd-kind-icon">style</a>
+							</li>
+						</ul>
 					</li>
+				</ul>
+				<ul class="after-current">
 					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module">
-						<a href="_tools_line_.html#drawingmode" class="tsd-kind-icon">Drawing<wbr>Mode</a>
+						<a href="../modules/_tools_marker_.html#drawingmode" class="tsd-kind-icon">Drawing<wbr>Mode</a>
 					</li>
 				</ul>
 			</nav>
