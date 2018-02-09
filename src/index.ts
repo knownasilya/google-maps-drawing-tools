@@ -59,6 +59,12 @@ export default class DrawingManager {
     return undefined;
   }
 
+  /**
+   * Removes a shape from the `shapes` array.
+   * Also removes it from the `data` layer if the `feature` is present on the shape.
+   *
+   * @param shape The shape to remove
+   */
   removeShape(shape: Shape) {
     if (shape.feature) {
       this.data.remove(shape.feature);
@@ -71,6 +77,12 @@ export default class DrawingManager {
     }
   }
 
+  /**
+   * Adds a shape to the `shapes` array. If the shape contains a `feature`, then that
+   * feature is added to the `data` layer.
+   *
+   * @param shape The shape to add
+   */
   addShape(shape: Shape) {
     if (shape.feature) {
       this.data.add(shape.feature);
