@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.7.0"></a>
+# [0.7.0](https://github.com/knownasilya/google-maps-drawing-tools/compare/v0.6.0...v0.7.0) (2018-02-09)
+
+
+### Features
+
+* add and remove shapes in the manager ([20f7912](https://github.com/knownasilya/google-maps-drawing-tools/commit/20f7912))
+
+
+
 <a name="0.6.0"></a>
 # [0.6.0](https://github.com/knownasilya/google-maps-drawing-tools/compare/v0.5.0...v0.6.0) (2018-02-09)
 
