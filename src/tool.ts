@@ -38,6 +38,8 @@ export default abstract class Tool {
     if (this.map) {
       this.map.setOptions({ draggableCursor: 'crosshair' });
     }
+
+    return this.shape;
   }
 
   deactivate() {

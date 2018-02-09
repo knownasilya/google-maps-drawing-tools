@@ -1,4 +1,4 @@
-import Tool, { ToolId, ToolOptions } from '../tool';
+import Tool, { Shape, ToolId, ToolOptions } from '../tool';
 import overlayToFeature from '../utils/overlay-to-feature';
 
 export interface RectangleToolOptions extends ToolOptions {
@@ -38,8 +38,8 @@ export default class RectangleTool extends Tool {
     this.data.setStyle(this.dmOptions);
   }
 
-  activate() {
-    super.activate();
+  activate(): Shape {
+    let shape = super.activate();
 
     let dm = this.dm;
 
@@ -50,6 +50,8 @@ export default class RectangleTool extends Tool {
     dm.setMap(this.map);
 
     this.setupListeners();
+
+    return shape;
   }
 
   deactivate() {

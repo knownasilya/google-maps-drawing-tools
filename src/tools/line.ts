@@ -1,4 +1,4 @@
-import Tool, { ToolId, ToolOptions } from '../tool';
+import Tool, { Shape, ToolId, ToolOptions } from '../tool';
 
 export interface LineToolOptions extends ToolOptions {
   data: google.maps.Data;
@@ -30,13 +30,15 @@ export default class LineTool extends Tool {
     };
   }
 
-  activate() {
-    super.activate();
+  activate(): Shape {
+    let shape = super.activate();
 
     this.data.setDrawingMode(this.dataId);
     this.data.setStyle(this.dataStyle);
 
     this.setupListeners();
+
+    return shape;
   }
 
   deactivate() {

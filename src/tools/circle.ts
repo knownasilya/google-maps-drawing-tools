@@ -1,4 +1,4 @@
-import Tool, { ToolId, ToolOptions } from '../tool';
+import Tool, { Shape, ToolId, ToolOptions } from '../tool';
 import overlayToFeature from '../utils/overlay-to-feature';
 
 export interface CircleToolOptions extends ToolOptions {
@@ -38,9 +38,8 @@ export default class CircleTool extends Tool {
     this.data.setStyle(this.dmOptions);
   }
 
-  activate() {
-    super.activate();
-
+  activate(): Shape {
+    let shape = super.activate();
     let dm = this.dm;
 
     dm.setDrawingMode(this.dmId);
@@ -50,6 +49,8 @@ export default class CircleTool extends Tool {
     dm.setMap(this.map);
 
     this.setupListeners();
+
+    return shape;
   }
 
   deactivate() {
