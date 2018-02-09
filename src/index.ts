@@ -25,12 +25,14 @@ export default class DrawingManager {
    * The currently selected tool.
    */
   tool?: Tool;
+  shapes: Shape[];
 
   constructor(options: ManagerOptions = {}) {
     this.map = options.map;
     this.data = options.data || new google.maps.Data();
 
     this.data.setMap(this.map);
+    this.shapes = [];
   }
 
   /**
@@ -47,10 +49,34 @@ export default class DrawingManager {
     this.data.setDrawingMode(null);
 
     if (this.tool) {
-      return this.tool.activate();
+      let shape = this.tool.activate();
+
+      this.shapes.push(shape);
+
+      return shape;
     }
 
     return undefined;
+  }
+
+  removeShape(shape: Shape) {
+    if (shape.feature) {
+      this.data.remove(shape.feature);
+    }
+
+    let index = this.shapes.indexOf(shape);
+
+    if (index !== -1) {
+      this.shapes.splice(index, 1);
+    }
+  }
+
+  addShape(shape: Shape) {
+    if (shape.feature) {
+      this.data.add(shape.feature);
+    }
+
+    this.shapes.push(shape);
   }
 
   /**
