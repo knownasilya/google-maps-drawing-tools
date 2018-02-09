@@ -1,4 +1,4 @@
-import Tool, { ToolOptions } from '../tool';
+import Tool, { ToolId, ToolOptions } from '../tool';
 
 export interface PolygonToolOptions extends ToolOptions {
   data: google.maps.Data;
@@ -8,7 +8,7 @@ export interface PolygonToolOptions extends ToolOptions {
 export type DrawingMode = 'Point' | 'LineString' | 'Polygon' | null;
 
 export default class PolygonTool extends Tool {
-  id: string;
+  id: ToolId;
   data: google.maps.Data;
 
   private dataId: DrawingMode;
@@ -18,9 +18,10 @@ export default class PolygonTool extends Tool {
   constructor(options: PolygonToolOptions) {
     super(options);
 
-    this.id = 'polygon';
+    this.id = ToolId.Polygon;
     this.data = options.data;
 
+    // private
     this.dataId = 'Polygon';
     this.dataStyle = options.style || {
       strokeColor: '#374046',
@@ -47,7 +48,7 @@ export default class PolygonTool extends Tool {
     this.cleanupListeners();
   }
 
-  setupListeners() {
+  private setupListeners() {
     let listener = this.data.addListener('addfeature', () => {
       this.deactivate();
     });
@@ -55,7 +56,7 @@ export default class PolygonTool extends Tool {
     this.dataListener = listener;
   }
 
-  cleanupListeners() {
+  private cleanupListeners() {
     if (this.dataListener) {
       google.maps.event.removeListener(this.dataListener);
     }

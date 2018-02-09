@@ -1,4 +1,4 @@
-import Tool, { ToolOptions } from '../tool';
+import Tool, { ToolId, ToolOptions } from '../tool';
 import overlayToFeature from '../utils/overlay-to-feature';
 
 export interface CircleToolOptions extends ToolOptions {
@@ -7,7 +7,7 @@ export interface CircleToolOptions extends ToolOptions {
 }
 
 export default class CircleTool extends Tool {
-  id: string;
+  id: ToolId;
   data: google.maps.Data;
 
   private dmId: google.maps.drawing.OverlayType;
@@ -18,9 +18,10 @@ export default class CircleTool extends Tool {
   constructor(options: CircleToolOptions) {
     super(options);
 
-    this.id = 'circle';
+    this.id = ToolId.Circle;
     this.data = options.data;
 
+    // private
     this.dmId = google.maps.drawing.OverlayType.CIRCLE;
     this.dm = new google.maps.drawing.DrawingManager({
       drawingControl: false
@@ -63,7 +64,7 @@ export default class CircleTool extends Tool {
     this.cleanupListeners();
   }
 
-  setupListeners() {
+  private setupListeners() {
     let dm = this.dm;
     let listener = dm.addListener('overlaycomplete', (event: google.maps.drawing.OverlayCompleteEvent) => {
       let feature = overlayToFeature(event.overlay);
@@ -79,7 +80,7 @@ export default class CircleTool extends Tool {
     this.dmListener = listener;
   }
 
-  cleanupListeners() {
+  private cleanupListeners() {
     if (this.dmListener) {
       google.maps.event.removeListener(this.dmListener);
     }

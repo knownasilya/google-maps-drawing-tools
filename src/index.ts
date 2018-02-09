@@ -1,4 +1,4 @@
-import Tool from './tool';
+import Tool, { ToolId } from './tool';
 import Circle from './tools/circle';
 import Line from './tools/line';
 import Polygon from './tools/polygon';
@@ -14,16 +14,6 @@ export interface ManagerOptions {
    * on.
    */
   data?: google.maps.Data;
-}
-
-/**
- * Available tool ids to use for `manager.changeTool`.
- */
-export enum ToolId {
-  Circle = 'circle',
-  Polygon = 'polygon',
-  Line = 'line',
-  Rectangle = 'rectangle'
 }
 
 export default class DrawingManager {
