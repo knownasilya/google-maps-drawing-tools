@@ -31,9 +31,13 @@ manager.data.toGeoJson((geojson) => {
 });
 ```
 
+[API Documentation][api]
+
 ## TODO
 
 - [ ] Add Text Label
 - [ ] Add measurement option
 - [ ] Add measurement units option
 - [ ] etc..
+
+[api]: https://knownasilya.github.io/google-maps-drawing-tools/
