@@ -8,6 +8,7 @@
   "ember-addon": {
     "main": "ember-addon.js"
   },
+  "repository": "https://github.com/knownasilya/google-maps-drawing-tools",
   "keywords": [
     "ember-addon",
     "google-maps",
