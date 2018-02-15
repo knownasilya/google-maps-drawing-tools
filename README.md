@@ -21,7 +21,7 @@ const manager = new DrawingManager({ map });
 // Load geojson
 manager.data.addGeoJson(geoJson);
 
-// Can also use 'line' and 'circle'
+// Can also use 'line', 'circle', 'rectangle' and 'marker'
 manager.changeTool('polygon');
 
 // Draw a polygon on the map..
