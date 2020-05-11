@@ -305,7 +305,7 @@
     "@types/minimatch" "*"
     "@types/node" "*"
 
-"@types/googlemaps@^3.30.5":
+"@types/googlemaps@^3.39.4":
   version "3.39.4"
   resolved "https://registry.yarnpkg.com/@types/googlemaps/-/googlemaps-3.39.4.tgz#c32ec3bb1481e53a7282598f7fa96a75bc834139"
   integrity sha512-R11RyCccERJhqSXlePFdoOXbWiTsY3H17Wl5e+JEpJFBXl8P+0Rm+JP8eqqSqOCtZjXDlYeKKnhE8a4VZlhtTw==

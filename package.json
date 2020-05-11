@@ -5,12 +5,8 @@
   "main": "dist/commonjs/src/index.js",
   "module": "dist/modules/src/index.js",
   "types": "dist/types/src/index.d.ts",
-  "ember-addon": {
-    "main": "ember-addon.js"
-  },
   "repository": "https://github.com/knownasilya/google-maps-drawing-tools",
   "keywords": [
-    "ember-addon",
     "google-maps",
     "drawing",
     "markup",
@@ -33,7 +29,7 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@types/googlemaps": "^3.30.5",
+    "@types/googlemaps": "^3.39.4",
     "@types/qunit": "^2.0.31",
     "ember-cli": "^2.18.2",
     "libkit": "^0.5.18",

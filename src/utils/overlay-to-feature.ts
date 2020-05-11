@@ -1,5 +1,5 @@
-import createCircle from "./create-circle";
-import createFeature from "./create-feature";
+import createCircle from './create-circle';
+import createFeature from './create-feature';
 
 export type Overlay =
   | google.maps.Marker
