@@ -1,6 +1,6 @@
 {
   "name": "google-maps-drawing-tools",
-  "version": "0.7.1",
+  "version": "1.0.0",
   "description": "Unified drawing tools for Google Maps",
   "main": "dist/commonjs/src/index.js",
   "module": "dist/modules/src/index.js",
@@ -17,7 +17,7 @@
   ],
   "scripts": {
     "release": "standard-version",
-    "docs": "typedoc --out docs/ ./src && touch docs/.nojekyll",
+    "docs": "typedoc --ignoreCompilerErrors --out docs/ ./src && touch docs/.nojekyll",
     "problems": "node ./scripts/problems.js",
     "prerelease": "npm run test && npm run docs && git add docs/ && git commit -m 'docs: build docs'",
     "prepack": "ember build -prod",

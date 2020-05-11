@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.0.0"></a>
+# [1.0.0](https://github.com/knownasilya/google-maps-drawing-tools/compare/v0.7.1...v1.0.0) (2020-05-11)
+
+
+### Bug Fixes
+
+* don't require google on module init ([2c45955](https://github.com/knownasilya/google-maps-drawing-tools/commit/2c45955))
+* move google namespaced access into classes or functions ([c0cc87e](https://github.com/knownasilya/google-maps-drawing-tools/commit/c0cc87e))
+
+
+### BREAKING CHANGES
+
+* don't register as ember-addon, requires ember-auto-import to import in Ember app
+
+
+
 <a name="0.7.1"></a>
 ## [0.7.1](https://github.com/knownasilya/google-maps-drawing-tools/compare/v0.7.0...v0.7.1) (2018-02-12)
 
